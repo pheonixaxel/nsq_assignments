@@ -1,0 +1,30 @@
+Book store
+
+
+Books - must have stock, number of book available
+
+Categories - the ones from amazon, a book can have more categories, categories have subcategories
+
+Character and Genre - the subcategories
+
+Custormer - normal customer credentials
+
+Order - unique identifier, date, quantity(pay attention to the copies)
+
+
+s
+The Category table has a ParentCategoryID which references its own CategoryID. This allows categories to be parents or children (subcategories). If ParentCategoryID is NULL, the category is a main category; if it has a value, it's a subcategory.
+The Book table contains details about the books.
+The BookCategory junction table creates a many-to-many relationship between books and categories. This allows for a book to be associated with multiple categories and/or subcategories.
+
+In this case you can show the categories like in the screenshot from itslearning.
+ Various implementations of the 1:1 recursive relationship figure 4.38 Database Systems
+
+Crime, Thrillers & Mystery
+Children's Books
+History
+Science Fiction & Fantasy
+Biography
+Literature & Fiction
+Romance
+Food & Drink
